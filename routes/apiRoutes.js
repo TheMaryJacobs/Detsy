@@ -1,4 +1,5 @@
 var db = require("../models");
+const num = "12";
 
 module.exports = {
   postExampleApi: async function(req, res) {
