@@ -3,14 +3,29 @@
 }
 
 body {
-  background-color: yellow;
+  background-color: rgb(201, 254, 44);
 }
 .navbar {
   margin-bottom: 25px;
 }
+
+.jumbotron {
+  background-color: white;
+}
+
+.section {
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  margin: 10px, auto;
+  padding: 5px, 5px;
+}
+
+.card {
+  margin: 5px, 5px;
+}
 h1 h2 {
   text-align: center;
-  background-color: ;
 }
 
 .container-form {
