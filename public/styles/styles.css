@@ -2,8 +2,20 @@
   line-height: 2.5;
 }
 
-h1,
-h2 {
+body {
+  background-color: yellow;
+}
+.navbar {
+  margin-bottom: 25px;
+}
+h1 h2 {
   text-align: center;
-  background-color: rebeccapurple;
+  background-color: ;
+}
+
+.container-form {
+  background-color: rgba(255, 255, 255, 0.81);
+  border-radius: 15px;
+  padding: 15px, 15px;
+  margin: 20px, auto;
 }
