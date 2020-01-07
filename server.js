@@ -14,6 +14,7 @@ app.use(express.static("public"));
 // Routes
 const API = require("./routes/apiRoutes");
 API.api(app);
+require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };
 
