@@ -1,8 +1,9 @@
-CREATE DATABASE user_db;
+DROP DATABASE IF EXISTS detsy_db;
+CREATE DATABASE detsy_db;
 
-USE user_db;
+USE detsy_db;
 
-CREATE TABLE user (
+CREATE TABLE users (
     id INTEGER(100) AUTO_INCREMENT NOT NULL,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
@@ -10,11 +11,7 @@ CREATE TABLE user (
     PRIMARY KEY (id)
 );
 
-CREATE DATABASE product_db;
-
-USE product_db;
-
-CREATE TABLE product (
+CREATE TABLE products (
     id INTEGER(100) AUTO_INCREMENT NOT NULL,
     user_name VARCHAR(100) NOT NULL,
     product_name VARCHAR(50) NOT NULL,
