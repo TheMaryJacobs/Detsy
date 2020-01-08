@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: rgb(201, 254, 44);
+  background-color: rgb(203, 172, 0);
 }
 .navbar {
   margin-bottom: 25px;
@@ -11,6 +11,16 @@ body {
 
 .jumbotron {
   background-color: white;
+}
+
+.visit-shop {
+  background-color: rgb(203, 172, 0);
+  color: black;
+}
+
+.open-shop {
+  background-color: rgb(203, 172, 0);
+  color: black;
 }
 
 .section {
@@ -24,6 +34,10 @@ body {
 .card {
   margin: 5px, 5px;
 }
+.card-title {
+  color: rgb(203, 172, 0);
+}
+
 h1 h2 {
   text-align: center;
 }
