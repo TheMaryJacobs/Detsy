@@ -9,15 +9,14 @@ var path = require("path");
 
 // Routes
 module.exports = function(app) {
-  // get all products
-
-  app.get("/api/products/all", function(req, res) {
+// get all products
+ app.get("/api/products/all", function(req, res) {
     db.Product.findAll({}).then(function(dbProducts) {
       res.json(dbProducts);
     });
   });
 
-  // get products by category
+// get products by category
   app.get("/api/category/:category", function(req, res) {
     db.Product.findAll({
       where: {
@@ -62,4 +61,30 @@ module.exports = function(app) {
       console.log("File Uploaded succesfully");
     });
   });
+  
+  // PUT route for updating products
+  app.put('/editProducts/:id', function(req, res) {
+    //req.isAuthenticated() will return true if user is logged in
+    // to check if a user is authenticated or not we use this method.
+    if(req.isAuthenticated()) {
+
+      db.Product.update({
+        productName: req.body.edited_product_name,
+        price: req.body.edited_price,
+        category: req.body.edited_category,
+        description: req.body.edited_description,
+      }, {
+        where: {
+          Id: req.params.id
+        }
+      }).then(function(results) {
+        console.log(req.params.id);
+        res.redirect('/editProducts/' + req.params.id)
+      });
+
+    }
+  });
+
+
+
 };
