@@ -1,6 +1,6 @@
 require("dotenv").config();
 var express = require("express");
-// var bodyParser = require("body-parser");
+// var bodyParser = require("body-parser"); <<<< BRIAN SAID COMMENT THIS OUT FOR NOW
 var session = require("express-session");
 
 var db = require("./models");
@@ -11,7 +11,7 @@ var PORT = process.env.PORT || 3000;
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-// app.use(bodyParser.urlencoded({ extended: false })); //For body parser
+// app.use(bodyParser.urlencoded({ extended: false })); //For body parser <<<<<< BRIAN SAID COMMENT THIS OUT FOR NOW BECAUSE IT'S THE SAME AS EXPRESS
 // app.use(bodyParser.json());
 app.use(express.static("public"));
 
