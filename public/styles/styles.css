@@ -2,8 +2,49 @@
   line-height: 2.5;
 }
 
-h1,
-h2 {
+body {
+  background-color: rgb(203, 172, 0);
+}
+.navbar {
+  margin-bottom: 25px;
+}
+
+.jumbotron {
+  background-color: white;
+}
+
+.visit-shop {
+  background-color: rgb(203, 172, 0);
+  color: black;
+}
+
+.open-shop {
+  background-color: rgb(203, 172, 0);
+  color: black;
+}
+
+.section {
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  margin: 10px, auto;
+  padding: 5px, 5px;
+}
+
+.card {
+  margin: 5px, 5px;
+}
+.card-title {
+  color: rgb(203, 172, 0);
+}
+
+h1 h2 {
   text-align: center;
-  background-color: rebeccapurple;
+}
+
+.container-form {
+  background-color: rgba(255, 255, 255, 0.81);
+  border-radius: 15px;
+  padding: 15px, 15px;
+  margin: 20px, auto;
 }
