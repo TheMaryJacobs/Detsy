@@ -5,35 +5,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>DETSY</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="/styles/styles.css">
+  <link rel="stylesheet" href="./styles/styles.css">
   
 </head>
 
 <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">DETSY</a>
+                <a class="navbar-brand" href="#">D E T S Y</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
-              
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
+                    <div class="col">
+                    <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Your Goods</a>
+                        <!-- change links to user's personal shop page -->
+                      <a class="nav-link" href="${user-name}./user-page.html">Your Goods</a>
                     </li>
-                    <li class="nav-item">
-                            <a class="nav-link" href="#">Message</a>
-                          </li>
-                  <form class="form-inline my-2 my-lg-0">
+                </div>
+                <div>
+                  <form class="form-inline my-2 my-lg-0 d-flex justify-content-end">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <button class="btn btn-outline-black my-2 my-sm-0" type="submit">Search</button>
                   </form>
+                </div>
+                
+                </div>
                 </div>
               </nav>
 
@@ -41,78 +44,86 @@
       <div class="container">
         <h1 class="display-4">DETSY</h1>
         <p class="lead">A marketplace to buy and sell goodies.</p>
+        <button id="sign-up-btn" type="button" class="btn open-shop btn-lg">Open A Shop</button>
       </div>
   </div>
 
-<button type="button" class="btn btn-secondary btn-lg">SIGN UP</button>
+<div class="section">
 
-<div class="row">
-  <div class="col-sm-6">
-      <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
+
+
+<div class="container">
+    <div class="row">
+    <div class="col-sm-4">
+        <div class="card" style="width: auto">
+            <!-- add in user uploaded image -->
+            <img id="shop-image" src="./images/bowling.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <!-- add in user shop name from db -->
+                <h5 id="shop-name" class="card-title">Card title</h5>
+                <p id="shop-description" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a id="visit-shop" href="#" class="btn visit-shop">Visit Shop</a>
+            </div>
+            </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card" style="width: auto">
+            <img id="shop-image" src="./images/cheese.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 id="shop-name" class="card-title">Shop Name</h5>
+                <p id="shop-description" class="card-text">Some quick example text to build on the Shop Name and make up the bulk of the card's content.</p>
+                <a id="visit-shop" href="#" class="btn visit-shop">Visit Shop</a>
+            </div>
+            </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card" style="width: auto">
+            <img id="shop-image" src="./images/gear.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 id="shop-name" class="card-title">Shop Name</h5>
+                <p id="shop-description" class="card-text">Some quick example text to build on the Shop Name and make up the bulk of the card's content.</p>
+                <a id="visit-shop" href="#" class="btn visit-shop">Visit Shop</a>
+            </div>
+            </div>
+    </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card" style="width: auto">
+                <img id="shop-image" src="./images/ipad.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 id="shop-name" class="card-title">Shop Name</h5>
+                    <p id="shop-description" class="card-text">Some quick example text to build on the Shop Name and make up the bulk of the card's content.</p>
+                    <a id="visit-shop" href="#" class="btn visit-shop">Visit Shop</a>
+                </div>
+                </div>
         </div>
-  </div>
-  <div class="col-sm-6">
-      <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
+        <div class="col-sm-4">
+            <div class="card" style="width: auto">
+                <img id="shop-image" src="./images/robot.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 id="shop-name" class="card-title">Shop Name</h5>
+                    <p id="shop-description" class="card-text">Some quick example text to build on the Shop Name and make up the bulk of the card's content.</p>
+                    <a id="visit-shop" href="#" class="btn visit-shop">Visit Shop</a>
+                </div>
+                </div>
         </div>
-  </div>
+        <div class="col-sm-4">
+            <div class="card" style="width: auto">
+                <img id="shop-image" src="./images/umbrella.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 id="shop-name" class="card-title">Shop Name</h5>
+                    <p id="shop-description" class="card-text">Some quick example text to build on the Shop Name and make up the bulk of the card's content.</p>
+                    <a id="visit-shop" href="#" class="btn visit-shop">Visit Shop</a>
+                </div>
+                </div>
+        </div>
+        </div>
+    
+    <br>
 </div>
-<div class="row">
-    <div class="col-sm-6">
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-    </div>
-    <div class="col-sm-6">
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-    </div>
-  </div>
-  <div class="row">
-      <div class="col-sm-6">
-          <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-      </div>
-      <div class="col-sm-6">
-          <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-      </div>
-    </div>
-
+</div>
 
 
   <script src="/js/example.js" type="module"></script>

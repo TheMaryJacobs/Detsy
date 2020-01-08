@@ -4,47 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>DETSY</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">DETSY</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Your Goods</a>
-                    </li>
-                    <li class="nav-item">
-                            <a class="nav-link" href="#">Message</a>
-                          </li>
-                  <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                  </form>
-                </div>
-              </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">D E T S Y</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="col">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <!-- change links to user's personal shop page -->
+              <a class="nav-link" href="${user-name}./user-page.html">Your Goods</a>
+            </li>
+        </div>
+        <div>
+          <form class="form-inline my-2 my-lg-0 d-flex justify-content-end">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+        
+        </div>
+        </div>
+      </nav>
 
-              <div class="container">
+              <div class="container-form p-5 m-5">
                     <h1>Add Product</h1>
                     <form>
                         <div class="form-group">
-                            <label for="item-name">Product Name</label>
+                            <label for="product-name">Product Name</label>
                             <input type="name" class="form-control" id="product-name" placeholder="Enter your product">
                           </div>
                         <div class="form-group">
-                          <label for="Email-address">Price</label>
-                          <input type="email" class="form-control" id="user-email" placeholder="$$$">
-                        <select class="custom-select">
-                            <option selected>Open this select menu</option>
+                          <label for="price">Price</label>
+                          <input type="number" class="form-control" id="price" placeholder="$$$">
+                        <select id="quantity" class="custom-select">
+                            <option selected>How many do you have to sell?</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -62,10 +65,12 @@
                           <textarea class="form-control" id="product-description" rows="3"></textarea>
                         </div>
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="customFile">
-                            <label class="custom-file-label" for="customFile">Choose file</label>
+                            <input type="file" class="custom-file-input" id="product-image">
+                            <label class="custom-file-label" for="customFile">Add Product Image</label>
                         </div>
-                        <button type="button" class="btn btn-secondary btn-lg">Set Up My Shop</button>
+                        <br>
+                        <br>
+                        <button id="add-item" type="button" class="btn btn-secondary btn-lg">Add Item to Shop</button>
                     </form>
                 </div>
             
