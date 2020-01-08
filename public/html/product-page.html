@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DETSY: Sign Up</title>
+    <title>DETSY</title>
     <link href="https://fonts.googleapis.com/css?family=Gelasio|Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -37,38 +37,34 @@
     </div>
   </nav>
 
-        <div class="container-form p-5 m-5">
-                <form>
-                    <h1>Set Up Shop</h1>
-                    <p>Give us some information about your goodie shop to set it up! Then add some items and start selling.</p>
-                    <div class="form-group">
-                        <label for="full-name">Full name</label>
-                        <input type="name" class="form-control" id="user-name" placeholder="Maxwell Hammers">
-                      </div>
-                    <div class="form-group">
-                      <label for="Email-address">Email address</label>
-                      <input type="email" class="form-control" id="email-address" placeholder="Maxwell@SilverHammers.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="Email-address">Shop Name</label>
-                        <input type="name" class="form-control" id="shop-name" placeholder="Maxwell's Silver Hammers">
-                      </div>
-                   
-                    <div class="form-group">
-                      <label for="shop-description">Describe Your Shop</label>
-                      <textarea class="form-control" id="shop-description" rows="3"></textarea>
-                    </div>
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="shop-image">
-                        <label class="custom-file-label" for="customFile">Add Shop Image</label>
-                    </div>
-                    <br>
-                    <br>
-                    <button id="set-up-shop" type="button" class="btn btn-secondary btn-lg">Set Up My Shop</button>
-                </form>
+          <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4">Shop Name</h1>
+                  <p class="lead">This is the shop description.</p>
+                </div>
+        </div>
+   
+        <div class="container-product">
+        <div class="row">
+            <div class="col-4">
+                <img src="./images/robot.png" class="product-image" id="product-image">
             </div>
 
-   
+            <div class="col-8">
+                <h1 id="product-name">Product name</h1>
+                <h2 id="product-description" class="prod-desc">This is the description of the product. It is blue and really really cool.</h2>
+                <h3 id="price" class="price">$99.99</h3>
+                <button type="button" class="btn btn-lg contact-seller">Contact Seller</button>
+            </div>
+        </div>
+        </div>
+
+
+
+
+
+
+
     <script src="/js/index.js" type="module"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
