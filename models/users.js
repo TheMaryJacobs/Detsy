@@ -1,8 +1,17 @@
 module.exports = function(sequelize, DataTypes) {
-  const users = sequelize.define("users", {
-    user_name: DataTypes.STRING,
-    email: DataTypes.STRING,
-    location: DataTypes.STRING
+  const User = sequelize.define("users", {
+    user_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    location: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   });
-  return users;
+  return User;
 };

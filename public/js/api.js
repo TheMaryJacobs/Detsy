@@ -1,7 +1,7 @@
-// The API object contains methods for each kind of request we'll make
+// // The API object contains methods for each kind of request we'll make
 export default {
   saveExample: function(example) {
-    return fetch("/api/examples", {
+    return fetch("/api/users", {
       headers: {
         "Content-Type": "application/json"
       },

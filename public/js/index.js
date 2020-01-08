@@ -1,8 +1,11 @@
-import API from "/js/api.js";
+// import API from "/js/api.js";
 
 // Get references to page elements
 //MJ - Homepage Elements
-// const signUpBtnEl = document.getElementById("sign-up-btn");
+
+alert("hi");
+const signUpBtnEl = document.getElementById("sign-up-btn");
+console.log(signUpBtnEl);
 // const visitShopBtnEls = document.getElementById("visit-shop");
 // const shopImageEls = document.getElementById("shop-image");
 // const shopNameEls = document.getElementById("shop-name");
