@@ -76,7 +76,7 @@ function renderCards() {
       </div>`;
   }
 }
-//   renderCards();
+renderCards();
 
 //pseudocode - MJ
 // event listener on signUpBtnEl that pops in sign-up.html into the main section
