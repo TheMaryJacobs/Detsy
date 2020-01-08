@@ -1,28 +1,24 @@
 .list-group-item {
   line-height: 2.5;
 }
-
 body {
   background-color: rgb(203, 172, 0);
+  font-family: "Oswald", sans-serif;
 }
 .navbar {
   margin-bottom: 25px;
 }
-
 .jumbotron {
   background-color: white;
 }
-
 .visit-shop {
   background-color: rgb(203, 172, 0);
   color: black;
 }
-
 .open-shop {
   background-color: rgb(203, 172, 0);
   color: black;
 }
-
 .section {
   justify-self: center;
   justify-content: center;
@@ -30,18 +26,31 @@ body {
   margin: 10px, auto;
   padding: 5px, 5px;
 }
-
 .card {
   margin: 5px, 5px;
 }
 .card-title {
   color: rgb(203, 172, 0);
+  font-family: "Gelasio", serif;
 }
-
 h1 h2 {
   text-align: center;
+  font-family: "Oswald", sans-serif;
 }
-
+.prod-desc {
+  color: white;
+}
+.contact-seller {
+  background-color: white;
+  border-color: rgb(203, 172, 0);
+}
+.price {
+}
+.container-product {
+  padding: 15px, 15px;
+  margin: 20px, auto;
+  margin-bottom: 100px;
+}
 .container-form {
   background-color: rgba(255, 255, 255, 0.81);
   border-radius: 15px;
