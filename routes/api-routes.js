@@ -1,33 +1,65 @@
-const Product = require("../models");
+// api-routes.js - this file offers a set of routes for displaying and saving data to the db
 
+// used for parsing form data
+var formidable = require("formidable");
+
+// Requiring our models
+var db = require("../models");
+var path = require("path");
+
+// Routes
 module.exports = function(app) {
-  // Sequelize code to get all products
-  app.get("/api/all", function(req, res) {
-    Product.findAll({}).then(function(results) {
+  // get all products
+
+  app.get("/api/products/all", function(req, res) {
+    db.Product.findAll({}).then(function(dbProducts) {
+      res.json(dbProducts);
+    });
+  });
+
+  // get products by category
+  app.get("/api/category/:category", function(req, res) {
+    db.Product.findAll({
+      where: {
+        category: req.params.category
+      }
+    }).then(function(results) {
       res.json(results);
     });
   });
 
-  // Sequelize code to get one specific product
-  app.get("/api/:product", async function(req, res) {
-    try {
-      const data = await Product.findByPk(req.params.product);
-      res.json(data);
-    } catch (err) {
-      throw Error(err);
-    }
-  });
+  // Add a New Products
+  app.post("/addProducts", function(req, res) {
+    // Setup formidable
+    // Instantiate a new formidable form for processing.
+    var form = new formidable.IncomingForm();
 
-  //Sequelize code to add a new product
-  app.post("/api/new", function(req, res) {
-    Product.create({
-      user_name: req.body.user_name,
-      product_name: req.body.product_name,
-      product_info: req.body.product_info,
-      price: req.body.price,
-      image_url: req.body.image_url
-    }).then(function(results) {
-      res.end();
+    // Parse the form request
+    // form.parse analyzes the incoming stream data, picking apart the different fields and files .
+    form.parse(req, function(err, fields, files) {
+      // Add Product to DB
+      db.Product.create({
+        UserId: fields.userID,
+        productName: fields.productName,
+        category: fields.category,
+        price: fields.price,
+        description: fields.description,
+        imageURL: files.imageURL.name
+      }).then(function(dbProduct) {
+        res.redirect("/product/" + dbProduct.id);
+      });
+    });
+    /* this is where the renaming happens */
+    form.on("fileBegin", function(name, file) {
+      //rename the incoming file to the file's name
+      file.path =
+        path.basename(path.dirname("../")) +
+        "/public/uploads/products/" +
+        file.name;
+    });
+
+    form.on("end", function() {
+      console.log("File Uploaded succesfully");
     });
   });
 };
