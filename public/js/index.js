@@ -2,11 +2,10 @@ import API from "/js/api.js";
 
 // Get references to page elements
 //MJ - Homepage Elements
-// const signUpBtnEl = document.getElementById("sign-up-btn");
-// const visitShopBtnEls = document.getElementById("visit-shop");
-// const shopImageEls = document.getElementById("shop-image");
-// const shopNameEls = document.getElementById("shop-name");
-// const shopDescriptionEls = document.getElementById("shop-description");
+const signUpBtnEl = document.getElementById("sign-up-btn");
+console.log(signUpBtnEl);
+const cardEls = document.querySelectorAll(".card");
+console.log(cardEls);
 
 //pseudocode - MJ
 // event listener on signUpBtnEl that pops in sign-up.html into the main section
