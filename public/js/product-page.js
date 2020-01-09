@@ -67,7 +67,7 @@ function renderProducts() {
   shopDescriptionEl.innerHTML = fakeData[0].shopDescription;
   productNameEl.innerHTML = fakeData[0].productName;
   productDescriptionEl.innerHTML = fakeData[0].productDescription;
-  priceEl.innerHTML = fakeData[0].price;
+  priceEl.innerHTML = "$" + fakeData[0].price;
   productImageEl.src = `${fakeData[0].productImage}`;
 }
 renderProducts();
