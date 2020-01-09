@@ -4,6 +4,7 @@ const productNameEl = document.getElementById("productName");
 const productDescriptionEl = document.getElementById("productDescription");
 const priceEl = document.getElementById("price");
 const productImageEl = document.getElementById("productImage");
+const contactSellerEl = document.getElementById("contact-seller");
 
 const fakeData = [
   {
@@ -69,5 +70,6 @@ function renderProducts() {
   productDescriptionEl.innerHTML = fakeData[0].productDescription;
   priceEl.innerHTML = "$" + fakeData[0].price;
   productImageEl.src = `${fakeData[0].productImage}`;
+  contactSellerEl.innerHTML = `<a id="contact-seller" href="mailto: info@infoat.com" class="btn contact-seller" role="button">Contact Seller</a>`;
 }
 renderProducts();

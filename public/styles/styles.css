@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: rgb(203, 172, 0);
+  background-color: goldenrod;
   font-family: "Oswald", sans-serif;
 }
 .navbar {
@@ -14,23 +14,28 @@ body {
   background-color: white;
 }
 .search-btn {
-  background-color: rgb(203, 172, 0);
+  background-color: goldenrod;
   color: black;
   margin-right: 10px;
 }
 
 .visit-shop {
-  background-color: rgb(203, 172, 0);
+  background-color: goldenrod;
   color: black;
 }
 
 .view-product {
-  background-color: rgb(203, 172, 0);
+  background-color: goldenrod;
   color: black;
 }
 
 .open-shop {
-  background-color: rgb(203, 172, 0);
+  background-color: goldenrod;
+  color: black;
+}
+
+.contact-seller {
+  background-color: white;
   color: black;
 }
 
@@ -52,7 +57,7 @@ body {
 }
 
 .card-title {
-  color: rgb(203, 172, 0);
+  color: goldenrod;
   font-family: "Gelasio", serif;
 }
 /* //search page results styling */
@@ -80,7 +85,7 @@ h1 h2 {
 }
 .contact-seller {
   background-color: white;
-  border-color: rgb(203, 172, 0);
+  border-color: goldenrod;
 }
 .price {
 }
