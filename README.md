@@ -30,6 +30,7 @@ Samantha Sengsouvanh
 Credit to Jake O’Toole for the format of this readme.
 
 # Challenges
+One of our members, Paul, was out sick for most of the project. Him working remote added several more communication challenges, and his brain working at 50% (his words) didn't help either.
 
 # License
 
