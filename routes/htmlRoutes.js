@@ -26,6 +26,9 @@ module.exports = function(app) {
   app.get("/search", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/html/search.html"));
   });
+  app.get("/log-in", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/log-in.html"));
+  });
   // app.get("/sign-up", function(req, res) {
   //   // If the user already has an account send them to the members page
   //   if (req.user) {
