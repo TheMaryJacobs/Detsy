@@ -10,7 +10,7 @@
   "test": {
     "username": "root",
     "password": "root",
-    "database": "testdb",
+    "database": "detsy_db",
     "host": "127.0.0.1",
     "port": "8889",
     "socketPath": "~travis/.my.cnf",
@@ -20,7 +20,7 @@
   "ci": {
     "username": "root",
     "password": "root",
-    "database": "testdb",
+    "database": "detsy_db",
     "host": "127.0.0.1",
     "socketPath": "~travis/.my.cnf",
     "dialect": "mysql",

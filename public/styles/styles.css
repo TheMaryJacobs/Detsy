@@ -13,6 +13,10 @@ body {
 .jumbotron {
   background-color: white;
 }
+.search-btn {
+  background-color: rgb(203, 172, 0);
+  color: black;
+}
 
 .visit-shop {
   background-color: rgb(203, 172, 0);
@@ -37,9 +41,15 @@ body {
   padding: 5px, 5px;
 }
 
-.card {
+.home-card {
   margin: 5px, 5px;
+  height: 550px;
 }
+
+.product-card {
+  width: 500px;
+}
+
 .card-title {
   color: rgb(203, 172, 0);
   font-family: "Gelasio", serif;

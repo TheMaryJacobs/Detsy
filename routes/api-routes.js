@@ -71,7 +71,7 @@ module.exports = function(app) {
     });
   });
 
-// get products by category
+  // get products by category
   app.get("/api/category/:category", function(req, res) {
     db.Product.findAll({
       where: {
@@ -132,9 +132,9 @@ module.exports = function(app) {
         where: {
           Id: req.params.id
         }
-      }).then(function(results) {
+      ).then(function(results) {
         console.log(req.params.id);
-        res.redirect('/editProducts/' + req.params.id)
+        res.redirect("/editProducts/" + req.params.id);
       });
 /**************************** 
  Updates product image 
