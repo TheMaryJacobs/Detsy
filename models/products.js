@@ -8,17 +8,17 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     category: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING
     },
     description: {
-      type: DataTypes.TEXT,
+      type: DataTypes.TEXT
     },
     price: {
-      type: DataTypes.DECIMAL(10,2),
-      allowNull: false,
+      type: DataTypes.DECIMAL(10, 2),
+      allowNull: false
     },
     imageURL: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING
     }
   });
 
@@ -28,7 +28,7 @@ module.exports = function(sequelize, DataTypes) {
     Product.belongsTo(models.User, {
       onDelete: "cascade",
       foreignKey: {
-      allowNull: false
+        allowNull: false
       }
     });
   };
