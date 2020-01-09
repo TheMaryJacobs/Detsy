@@ -1,6 +1,9 @@
 const shopNameEl = document.getElementById("shopName");
 const shopDescriptionEl = document.getElementById("shopDescription");
-const productContainerEl = document.getElementById("productContainer");
+const productNameEl = document.getElementById("productName");
+const productDescriptionEl = document.getElementById("productDescription");
+const priceEl = document.getElementById("price");
+const productImageEl = document.getElementById("productImage");
 
 const fakeData = [
   {
@@ -59,28 +62,12 @@ function shuffle(a) {
 shuffle(fakeData);
 
 function renderProducts() {
-  productContainerEl.innerHTML = "";
+  console.log(fakeData[0].productImage);
   shopNameEl.innerHTML = fakeData[0].shopName;
   shopDescriptionEl.innerHTML = fakeData[0].shopDescription;
-
-  for (let i = 0; i < fakeData.length; i++) {
-    const productCard = document.createElement("div");
-    productCard.innerHTML = `
-     <br>
-     <div class="row">
-         <div class="col-4">
-             <img src="${fakeData[i].productImage}" class="product-image"">
-         </div>
-
-         <div class="col-8">
-             <h1 id="productName">${fakeData[i].productName}</h1>
-             <h2 id="productDescription" class="prod-desc">${fakeData[i].productDescription}</h2>
-             <h3 id="price" class="price">$${fakeData[i].price}</h3>
-             <button type="button" class="btn btn-lg contact-seller">Contact Seller</button>
-         </div>
-     </div>
-     `;
-    productContainerEl.append(productCard);
-  }
+  productNameEl.innerHTML = fakeData[0].productName;
+  productDescriptionEl.innerHTML = fakeData[0].productDescription;
+  priceEl.innerHTML = "$" + fakeData[0].price;
+  productImageEl.src = `${fakeData[0].productImage}`;
 }
 renderProducts();

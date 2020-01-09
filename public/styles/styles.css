@@ -13,8 +13,18 @@ body {
 .jumbotron {
   background-color: white;
 }
+.search-btn {
+  background-color: rgb(203, 172, 0);
+  color: black;
+  margin-right: 10px;
+}
 
 .visit-shop {
+  background-color: rgb(203, 172, 0);
+  color: black;
+}
+
+.view-product {
   background-color: rgb(203, 172, 0);
   color: black;
 }
@@ -32,12 +42,31 @@ body {
   padding: 5px, 5px;
 }
 
-.card {
+.home-card {
   margin: 5px, 5px;
+  height: 550px;
 }
+
+.product-card {
+  width: 500px;
+}
+
 .card-title {
   color: rgb(203, 172, 0);
   font-family: "Gelasio", serif;
+}
+/* //search page results styling */
+li {
+  margin: 5px, 5px;
+}
+.media-body {
+  padding-left: 20px;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 100px;
+  margin-left: 50px;
 }
 
 h1 h2 {
@@ -46,6 +75,8 @@ h1 h2 {
 }
 .prod-desc {
   color: white;
+  font-size: 18px;
+  font-family: "Gelasio", serif;
 }
 .contact-seller {
   background-color: white;
@@ -54,23 +85,27 @@ h1 h2 {
 .price {
 }
 
-.thumbnail {
-  width: 100px;
-  height: 100px;
+.card-img {
+  width: 200px;
+  height: 200px;
 }
 
-/* .search-result{
-  width: 90%;
-  height: 200px;
+.media {
+  width: auto;
   background-color: rgba(255, 255, 255, 0.81);
-  margin: 25px, auto;
-} */
+  margin-top: 15px;
+  margin-left: 25px;
+  margin-right: 25px;
+  align-self: center;
+  border-radius: 15px;
+  padding: 5px;
+}
 
 .container-search {
   background-color: rgba(255, 255, 255, 0.81);
   border-radius: 15px;
   padding: 15px, 15px;
-  margin: 20px, auto;
+  margin: 20px, 50px, 20px, 50px;
 }
 
 .container-product {

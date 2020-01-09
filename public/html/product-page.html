@@ -25,12 +25,15 @@
             <!-- change links to user's personal shop page -->
           <a class="nav-link" href="/user-page">Your Goods</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/add-product">Add Product</a>
+        </li>
     </div>
     <div>
       <form class="form-inline my-2 my-lg-0 d-flex justify-content-end">
+        <a href="/log-in" class="btn search-btn" role="button">Log In</a>
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <!-- <button class="btn btn-outline-black my-2 my-sm-0" type="submit">Search</button> -->
-        <a href="/search" class="btn btn-outline-black my-2 my-sm-0" role="button">Search</a>
+        <a href="/search" class="btn search-btn" role="button">Search</a>
       </form>
     </div>
     
@@ -45,9 +48,23 @@
                 </div>
         </div>
    
-        <div class="container-product" id="productContainer">
+        <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <img src="./images/robot.png" class="product-image" id="productImage">
+            </div>
 
+            <div class="col-8">
+                <h1 id="productName">Product name</h1>
+                <h2 id="productDescription" class="prod-desc">This is the description of the product. It is blue and really really cool.</h2>
+                <h3 id="price" class="price">$99.99</h3>
+                <button type="button" class="btn btn-lg contact-seller">Contact Seller</button>
+            </div>
         </div>
+
+      </div>
+       
+    
 
 
 
