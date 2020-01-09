@@ -23,8 +23,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Routes
-const API = require("./routes/apiRoutes");
-API.api(app);
 require("./routes/htmlRoutes")(app);
 require("./routes/api-routes.js")(app);
 
