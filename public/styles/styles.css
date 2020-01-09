@@ -16,6 +16,7 @@ body {
 .search-btn {
   background-color: rgb(203, 172, 0);
   color: black;
+  margin-right: 10px;
 }
 
 .visit-shop {
@@ -74,6 +75,8 @@ h1 h2 {
 }
 .prod-desc {
   color: white;
+  font-size: 18px;
+  font-family: "Gelasio", serif;
 }
 .contact-seller {
   background-color: white;
