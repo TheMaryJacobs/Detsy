@@ -23,4 +23,7 @@ module.exports = function(app) {
   app.get("/search", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/html/search.html"));
   });
+  app.get("/log-in", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/log-in.html"));
+  });
 };
