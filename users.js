@@ -52,7 +52,7 @@ var bcrypt = require("bcryptjs");
       // Associating a user with product
       // When a user is deleted, also delete any associated product(s)
       // simply adds ON DELETE CASCADE rule to your database which specifies 
-      // that the child data gets deleted when the parent data is deleted.
+      // that the child data gets deleted when the parent data is deleted
       User.hasMany(models.Product, {
         onDelete: "cascade"
       });

@@ -213,10 +213,6 @@ module.exports = function(app) {
     }); 
   });
 /**************************** 
- // PUT route for Updating User.
-***************************/
-
-/**************************** 
   // Add a profile image 
 ***************************/
   app.put("/profile-image", function(req, res) {
