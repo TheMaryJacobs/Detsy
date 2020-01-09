@@ -12,7 +12,7 @@ module.exports = function(app) {
   // get all products
 
   app.get("/api/products/all", function(req, res) {
-    db.Product.findAll({}).then(function(dbProducts) {
+    db.Product.findAll().then(function(dbProducts) {
       res.json(dbProducts);
     });
   });
