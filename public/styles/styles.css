@@ -19,6 +19,11 @@ body {
   color: black;
 }
 
+.view-product {
+  background-color: rgb(203, 172, 0);
+  color: black;
+}
+
 .open-shop {
   background-color: rgb(203, 172, 0);
   color: black;
