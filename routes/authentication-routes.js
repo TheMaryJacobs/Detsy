@@ -1,6 +1,7 @@
 // using passport for authentication
 var passport = require("../config/passport");
 
+var bCrypt = require("bcrypt-nodejs");
 var db = require("../models");
 
 module.exports = function(app) {
