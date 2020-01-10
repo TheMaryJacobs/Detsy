@@ -9,3 +9,4 @@ VALUES ("Det Sorthepharack", "detvisiths@gmail.com", "9498574135", "det store", 
 
 
 INSERT INTO products (productName, category, description, price, imageURL, createdAt, updatedAt, UserId) 
+VALUES

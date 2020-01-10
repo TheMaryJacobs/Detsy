@@ -9,19 +9,16 @@ var db = require("../models");
 // Routes
 module.exports = function(app) {
 
-  // Each of the below routes just handles the HTML page that the user gets sent to.
-
-  // index route loads .html
+  // index route loads index.html
   app.get("/", function(req, res) {
     db.Product.findAll({
-      limit: 4,
+      limit: 7,
       where: {
        category: 'Smartphones'
       },
       include: [db.User]
     }).then(function(results) {
       res.sendFile(path.join(__dirname, "../public/html/index.html"));
-      // res.render('index', { product: results} );
     });
   });
 
@@ -35,8 +32,7 @@ module.exports = function(app) {
             db.Product
         ]
       }).then(function(results) {
-        //  res.render('store', {userInfo: results});
-        res.sendFile(path.join(__dirname, "../public/html/user-page.html"));
+          res.sendFile(path.join(__dirname, "../public/html/user-page.html"));
       });
     }
   });
@@ -59,7 +55,6 @@ app.get("/add-product", function(req, res) {
         include: [db.User]
       }).then(function(results) {
         res.sendFile(path.join(__dirname, "../public/html/search.html"));
-        // res.render("search", { productsSearched: results });
       });
     };
   });
@@ -72,7 +67,6 @@ app.get("/add-product", function(req, res) {
       },
       include: [db.User]
     }).then(function(results) {
-      // res.render("product-view", { product: results });
       res.sendFile(path.join(__dirname, "../public/html/product-page.html"));
     });
   });

@@ -1,19 +1,15 @@
+var path = require("path");
 var exports = module.exports = {}
 
 exports.signup = function(req, res) {
-//    res.render('sign-in', {error: req.flash("error")[0]});
+res.sendFile(path.join(__dirname, "../public/sign-up.html"));
 
 }
 
 exports.signin = function(req, res) {
-    // res.render('sign-in', {error: req.flash("error")[0]});
-    
+    res.sendFile(path.join(__dirname, "../public/log-in.html"));   
 }
 
-exports.user = function(req, res) {
-  
-    // res.render('user');
-}
 
 exports.logout = function(req, res) {
        req.session.destroy(function(err) {
