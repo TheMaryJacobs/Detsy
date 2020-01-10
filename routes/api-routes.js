@@ -2,7 +2,7 @@
 
 // used for parsing form data
 var formidable = require("formidable");
-
+var bCrypt = require("bcrypt-nodejs");
 // Requiring our models
 var db = require("../models");
 var path = require("path");
@@ -205,4 +205,43 @@ module.exports = function(app) {
       console.log("File Uploaded Succefully");
     });
   });
+   /**************************** 
+// PUT route for Updating User.
+***************************/
+app.put("/user", function(req, res) {
+    
+  var password = req.body.password;
+
+  db.User.findOne({
+    where: {
+      id: req.body.id
+    }
+  }).then(function(dbUser) {
+    // Checks if password input matches hash in DB
+    if( password !== dbUser.password ) {
+      // Hash the password then save to DB
+      password = bCrypt.hashSync(password);
+    }
+
+    db.User.update({
+      name: req.body.name,
+      email: req.body.email,
+      phone: req.body.phone_number,
+      userName: req.body.user_name,
+      password: password,
+      // location: req.body.location
+    }, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(dbUser) {
+      res.json(dbUser);
+    });
+
+  });
+
+});
+
+
+
 };
