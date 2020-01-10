@@ -1,3 +1,4 @@
+//generated through sequelize cli
 module.exports = function(sequelize, DataTypes) {
   var Product = sequelize.define("Product", {
     productName: {
