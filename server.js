@@ -2,7 +2,10 @@ require("dotenv").config();
 var express = require("express");
 // var bodyParser = require("body-parser"); <<<< BRIAN SAID COMMENT THIS OUT FOR NOW
 var session = require("express-session");
+var passport = require("passport");
+var flash = require("connect-flash");
 var passport = require("./config/passport");
+
 
 var db = require("./models");
 
@@ -15,17 +18,27 @@ app.use(express.json());
 // app.use(bodyParser.urlencoded({ extended: false })); //For body parser <<<<<< BRIAN SAID COMMENT THIS OUT FOR NOW BECAUSE IT'S THE SAME AS EXPRESS
 // app.use(bodyParser.json());
 app.use(express.static("public"));
-// We need to use sessions to keep track of our user's login status
-app.use(
-  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
-);
+
+app.use(flash());
+
+
+// For Passport
+app.use(session({ secret: 'keyboard cat',resave: false, saveUninitialized:false})); // session secret
 app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.session()); // persistent login sessions
+app.use(function(req, res, next){
+  res.locals.isAuthenticated = req.isAuthenticated();
+  console.log(req.isAuthenticated());
+  console.log(req.user);
+  next();
+});
+
 
 // Routes
 require("./routes/htmlRoutes")(app);
 require("./routes/api-routes.js")(app);
-require("./routes/authentication-routes.js")(app);
+require('./config/passport.js');
+require("./routes/authentication-routes.js")(app,passport);
 
 var syncOptions = { force: false };
 
