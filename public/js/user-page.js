@@ -63,7 +63,8 @@ function renderProducts() {
   shopNameEl.innerHTML = fakeData[0].shopName;
   shopDescriptionEl.innerHTML = fakeData[0].shopDescription;
   shopContainerEl.innerHTML = "";
-  // contactSellerEl.innerHTML = fakeData[].emailAddress;
+  //put in template literal for user email address
+  contactSellerEl.innerHTML = `<a id="contact-seller" href="mailto: info@infoat.com" class="btn open-shop" role="button">Contact Seller</a>`;
 
   for (let i = 0; i < fakeData.length; i++) {
     const productCard = document.createElement("div");

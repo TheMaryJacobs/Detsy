@@ -25,6 +25,7 @@ app.use(passport.session());
 // Routes
 require("./routes/htmlRoutes")(app);
 require("./routes/api-routes.js")(app);
+require("./routes/authentication-routes.js")(app);
 
 var syncOptions = { force: false };
 
