@@ -11,6 +11,10 @@ This is a marketplace app. Using this app users can create a profile, list items
 ---
 
 # Images
+![home page](https://github.com/TheMaryJacobs/Project2/blob/nav-fix/public/readme%20images/Screen%20Shot%202020-01-09%20at%2010.01.11%20PM.png?raw=true)
+![search page](https://github.com/TheMaryJacobs/Project2/blob/nav-fix/public/readme%20images/Screen%20Shot%202020-01-09%20at%2010.03.15%20PM.png?raw=true)
+![product page](https://github.com/TheMaryJacobs/Project2/blob/nav-fix/public/readme%20images/Screen%20Shot%202020-01-09%20at%2010.03.41%20PM.png?raw=true)
+![sign up page](https://github.com/TheMaryJacobs/Project2/blob/nav-fix/public/readme%20images/Screen%20Shot%202020-01-09%20at%2010.05.06%20PM.png?raw=true)
 
 # Usage
 
