@@ -76,16 +76,10 @@ app.get("/add-product", function(req, res) {
   });
   
   app.get("/sign-up", function(req, res) {
-    if (req.user) {
-      res.redirect("/user-page");
-    }
     res.sendFile(path.join(__dirname, "../public/html/sign-up.html"));
   });
   
   app.get("/log-in", function(req, res) {
-    if (req.user) {
-      res.redirect("/user-page");
-    }
     res.sendFile(path.join(__dirname, "../public/html/log-in.html"));
   });
  
