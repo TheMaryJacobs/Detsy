@@ -58,7 +58,8 @@ body {
 
 .card-title {
   color: goldenrod;
-  font-family: "Gelasio", serif;
+  font-family: "Oswald", sans-serif;
+  font-size: 22px;
 }
 /* //search page results styling */
 li {
@@ -77,6 +78,11 @@ li {
 h1 h2 {
   text-align: center;
   font-family: "Oswald", sans-serif;
+}
+
+p {
+  font-family: "Gelasio", serif;
+  font-size: 16px;
 }
 .prod-desc {
   color: white;
@@ -124,4 +130,34 @@ h1 h2 {
   border-radius: 15px;
   padding: 15px, 15px;
   margin: 20px, auto;
+}
+
+.footer {
+  background-color: black;
+  height: 165px;
+}
+
+.nav-link.foot {
+  color: goldenrod;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.top-nav:hover {
+  color: goldenrod;
+}
+
+.nav-link.foot:hover {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.detsy {
+  color: white;
+  font-size: 46px;
+  text-align: center;
+  margin-top: 15px;
 }
