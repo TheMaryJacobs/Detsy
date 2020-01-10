@@ -132,11 +132,13 @@ p {
   margin: 20px, auto;
 }
 
+/* design a footer for app */
 .footer {
   background-color: black;
   height: 165px;
 }
 
+/* designed links to github */
 .nav-link.foot {
   color: goldenrod;
   text-decoration: none;
@@ -144,10 +146,12 @@ p {
   padding-top: 30px;
 }
 
+/* created hover effect on topnav */
 .top-nav:hover {
   color: goldenrod;
 }
 
+/* created hover effect on footer navlink */
 .nav-link.foot:hover {
   color: white;
   text-decoration: none;
@@ -155,6 +159,7 @@ p {
   padding-top: 30px;
 }
 
+/* designed bottom logo */
 .detsy {
   color: white;
   font-size: 46px;
