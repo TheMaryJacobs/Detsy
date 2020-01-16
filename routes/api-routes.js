@@ -2,7 +2,7 @@
 
 // used for parsing form data
 var formidable = require("formidable");
-var bCrypt = require("bcrypt-nodejs");
+
 // Requiring our models
 var db = require("../models");
 var path = require("path");
@@ -16,6 +16,15 @@ module.exports = function(app) {
   app.get("/api/products/all", function(req, res) {
     db.Product.findAll().then(function(dbProducts) {
       res.json(dbProducts);
+    });
+  });
+  /**************************** 
+  // get all users
+  ***************************/
+
+  app.get("/api/users/all", function(req, res) {
+    db.User.findAll().then(function(dbUsers) {
+      res.json(dbUsers);
     });
   });
   /**************************** 
@@ -33,7 +42,7 @@ module.exports = function(app) {
   /**************************** 
   // Add a New Products
   ***************************/
-  app.post("/addProducts", function(req, res) {
+  app.post("/api/add-product", function(req, res) {
     // Setup formidable
     // Instantiate a new formidable form for processing.
     var form = new formidable.IncomingForm();
@@ -42,14 +51,15 @@ module.exports = function(app) {
     form.parse(req, function(err, fields, files) {
       // Add Product to DB
       db.Product.create({
-        UserId: fields.userID,
         productName: fields.productName,
+        username: fields.username,
         category: fields.category,
-        price: fields.price,
         description: fields.description,
-        imageURL: files.imageURL.name
+        price: fields.price,
+        quantity: fields.quantity,
+        imageURL: fields.imageURL
       }).then(function(dbProduct) {
-        res.redirect("/product/" + dbProduct.id);
+        res.redirect("/product-page/" + dbProduct.id);
       });
     });
     /* this is where the renaming happens */
@@ -205,43 +215,4 @@ module.exports = function(app) {
       console.log("File Uploaded Succefully");
     });
   });
-   /**************************** 
-// PUT route for Updating User.
-***************************/
-app.put("/user", function(req, res) {
-    
-  var password = req.body.password;
-
-  db.User.findOne({
-    where: {
-      id: req.body.id
-    }
-  }).then(function(dbUser) {
-    // Checks if password input matches hash in DB
-    if( password !== dbUser.password ) {
-      // Hash the password then save to DB
-      password = bCrypt.hashSync(password);
-    }
-
-    db.User.update({
-      name: req.body.name,
-      email: req.body.email,
-      phone: req.body.phone_number,
-      userName: req.body.user_name,
-      password: password,
-      // location: req.body.location
-    }, {
-      where: {
-        id: req.body.id
-      }
-    }).then(function(dbUser) {
-      res.json(dbUser);
-    });
-
-  });
-
-});
-
-
-
 };
