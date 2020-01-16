@@ -8,42 +8,13 @@ const fakeFormEl = document.getElementById("fakeForm");
 
 let userData;
 
-  axios
-  .get("/api/user_data")
-  .then(function (response) {
-    console.log(response);
-    userData = response.data.username;
-    console.log(userData);
-    renderFakeForm();
-  })
-  
-  function renderFakeForm(){
-      fakeFormEl.innerHTML = userData;
-  }
-  addItemButtonEl.addEventListener("click", function() {
-    // const productName = productNameEl.value;
-    // const username = userData;
-    // const category = cate
-    // const description = 
-    // const price = 
-    // const quantity = 
-    // const imageURL = 
+axios.get("/api/user_data").then(function(response) {
+  console.log(response);
+  userData = response.data.username;
+  console.log(userData);
+  renderFakeForm();
+});
 
-    axios
-    .post("/api/add-product", {
-      productName,
-      username,
-      category,
-      description,
-      price,
-      quantity,
-      imageURL
-    })
-    .then(function(response) {
-      console.log(response);
-    })
-    .catch(function(error) {
-      console.log(error);
-    });
-    
-  })
+function renderFakeForm() {
+  fakeFormEl.innerHTML = userData;
+}
