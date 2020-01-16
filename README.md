@@ -22,10 +22,10 @@ This is a helpful app for both buyers to find unique, handcrafted items, or sell
 
 # Contributing
 
-Amira Chikhaoui
-Det Sorthepharack
-Mary Jacobs
-Paul Hendrickson
+Amira Chikhaoui,
+Det Sorthepharack,
+Mary Jacobs,
+Paul Hendrickson, and 
 Samantha Sengsouvanh
 
 Credit to Jake O’Toole for the format of this readme.

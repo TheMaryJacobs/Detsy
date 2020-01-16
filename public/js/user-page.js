@@ -3,6 +3,15 @@ const shopDescriptionEl = document.getElementById("shopDescription");
 const shopContainerEl = document.getElementById("shopContainer");
 const contactSellerEl = document.getElementById("contact-seller");
 
+let realData;
+
+console.log(window.location.href);
+console.log(window.location.href.slice(-1));
+
+axios
+  .get("/api/users/all")
+  .then(res => console.log(res.data));
+
 const fakeData = [
   {
     shopName: "Paul's Wonderful Things",
@@ -68,6 +77,7 @@ function renderProducts() {
 
   for (let i = 0; i < fakeData.length; i++) {
     const productCard = document.createElement("div");
+    productCard.setAttribute("class", "col-6")
     productCard.innerHTML = `
 
       <div class="card product-card m-1" style="max-width: 540px;">

@@ -2,5 +2,8 @@
   "extends": ["react-app"],
   "env": {
     "jquery": true
+  },
+  "globals": {
+    "axios": "readonly"
   }
 }

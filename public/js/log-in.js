@@ -17,7 +17,25 @@ setUpShopBtnEl.addEventListener("click", function() {
       password
     })
   })
-    .then(res => res.json())
-    .then(data => console.log(data));
+    .then(function(response) {
+      const signInAttempt = response.statusText;
+      console.log(signInAttempt);
+      if (signInAttempt === "OK") {
+        success();
+      } else {
+        failure();
+      }
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
 });
 // adds input information into an object that can be added to the database
+
+function success(){
+  alert("You are signed in");
+}
+
+function failure(){
+  alert("Error. Email and password did not match.");
+}
