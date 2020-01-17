@@ -19,6 +19,15 @@ module.exports = function(app) {
     });
   });
   /**************************** 
+  // get all users
+  ***************************/
+
+  app.get("/api/users/all", function(req, res) {
+    db.User.findAll().then(function(dbUsers) {
+      res.json(dbUsers);
+    });
+  });
+  /**************************** 
 // get products by category
   ***************************/
   app.get("/api/category/:category", function(req, res) {
@@ -33,7 +42,7 @@ module.exports = function(app) {
   /**************************** 
   // Add a New Products
   ***************************/
-  app.post("/addProducts", function(req, res) {
+  app.post("/api/add-product", function(req, res) {
     // Setup formidable
     // Instantiate a new formidable form for processing.
     var form = new formidable.IncomingForm();
@@ -42,14 +51,15 @@ module.exports = function(app) {
     form.parse(req, function(err, fields, files) {
       // Add Product to DB
       db.Product.create({
-        UserId: fields.userID,
         productName: fields.productName,
+        username: fields.username,
         category: fields.category,
-        price: fields.price,
         description: fields.description,
-        imageURL: files.imageURL.name
+        price: fields.price,
+        quantity: fields.quantity,
+        imageURL: fields.imageURL
       }).then(function(dbProduct) {
-        res.redirect("/product/" + dbProduct.id);
+        res.redirect("/product-page/" + dbProduct.id);
       });
     });
     /* this is where the renaming happens */

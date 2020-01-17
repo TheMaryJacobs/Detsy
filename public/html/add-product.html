@@ -25,14 +25,14 @@
             </li>
             <li class="nav-item">
                 <!-- change links to user's personal shop page -->
-              <a class="nav-link" href="/user-page">Your Goods</a>
-            </li>
+                <a class="nav-link" href="/user-page" id="yourGoods">Your Goods</a>
+              </li>
             <li class="nav-item">
-            <a class="nav-link" href="/add-product">Add Product</a>
+            <a class="nav-link" href="/add-product" id="addProduct">Add Product</a>
           </li>
         </div>
         <div>
-          <form class="form-inline my-2 my-lg-0 d-flex justify-content-end">
+          <form class="form-inline my-2 my-lg-0 d-flex justify-content-end" id="rightNav">
             <a href="/log-in" class="btn search-btn" role="button">Log In</a>
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <a href="/search" class="btn search-btn" role="button">Search</a>
@@ -47,6 +47,10 @@
                     <h1>Add Product</h1>
                     <form>
                         <div class="form-group">
+                          <label for="user-name">Username</label>
+                          <div class="form-control" id="fakeForm"></div>
+                        </div>
+                            <div class="form-group">
                             <label for="product-name">Product Name</label>
                             <input type="name" class="form-control" id="product-name" placeholder="Enter your product">
                           </div>
@@ -89,6 +93,7 @@
                           <label class="form-check-label" for="inlineCheckbox3">Furniture</label>
                         </div>
                         <div class="form-check form-check-inline">
+<<<<<<< HEAD
                           <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
                           <label class="form-check-label" for="inlineCheckbox3">Collectibles</label>
                         </div>
@@ -99,6 +104,18 @@
                         <div class="form-check form-check-inline">
                           <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
                           <label class="form-check-label" for="inlineCheckbox3">Miscellaneous</label>
+=======
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option5">
+                          <label class="form-check-label" for="inlineCheckbox3">Tools</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option6">
+                          <label class="form-check-label" for="inlineCheckbox3">Blood</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option7">
+                          <label class="form-check-label" for="inlineCheckbox3">Teeth</label>
+>>>>>>> e0de57b7b9fe7ae1a7aa538b7e9fa3751affda9a
                         </div>
                         <br>
                         <br>
@@ -138,6 +155,8 @@
                   </footer>
     
     <script src="/js/add-product.js" type="module"></script>
+    <script src="/js/navbar.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.1/axios.js" integrity="sha256-J6UlS3kpnhiSiNQ9lGoV9Q94ZpIPff3UZcR0dDwIT6g=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

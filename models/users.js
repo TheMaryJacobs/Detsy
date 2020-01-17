@@ -6,11 +6,11 @@ var bcrypt = require("bcryptjs");
 //Set it as export because we will need it required on the server
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
-    name: {
+    username: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [5]
+        len: [3, 32]
       }
     },
     email: {
@@ -18,14 +18,17 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       unique: true,
       validate: {
-        isEmail: true,
-        len: [6, 128]
+        isEmail: true
       }
     },
-    phone: {
-      type: DataTypes.STRING
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [5, 45]
+      }
     },
-    userName: {
+    shopName: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
@@ -33,19 +36,12 @@ module.exports = function(sequelize, DataTypes) {
         len: [3]
       }
     },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [5, 100]
-      }
+    shopDescription: {
+      type: DataTypes.STRING
     },
-    profileImage: {
+    shopImage: {
       type: DataTypes.STRING
     }
-    // location: {
-    //   type: DataTypes.STRING,
-    // }
   });
 
   User.associate = function(models) {

@@ -20,7 +20,7 @@ module.exports = function(app) {
   app.get("/sign-up", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/html/sign-up.html"));
   });
-  app.get("/user-page", function(req, res) {
+  app.get("/user-page/:id", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/html/user-page.html"));
   });
   app.get("/search", function(req, res) {

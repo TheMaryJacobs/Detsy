@@ -3,6 +3,7 @@ var passport = require("../config/passport");
 
 var bCrypt = require("bcrypt-nodejs");
 var db = require("../models");
+var path = require("path");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -12,7 +13,7 @@ module.exports = function(app) {
     // Since we're doing a POST with javascript, we can't actually redirect that post into a GET request
     // So we're sending the user back the route to the members page because the redirect will happen on the front end
     // They won't get this or even be able to access this page if they aren't authed
-    res.json("/user-page");
+    res.sendFile(path.join(__dirname, "../public/html/user-page.html"));
   });
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
@@ -24,7 +25,7 @@ module.exports = function(app) {
         res.redirect(307, "/api/login");
       })
       .catch(function(err) {
-        console.log(err);
+        // console.log(err);
         res.json(err);
         // res.status(422).json(err.errors[0].message);
       });
@@ -45,8 +46,14 @@ module.exports = function(app) {
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
+        id: req.user.id,
+        username: req.user.username,
         email: req.user.email,
-        id: req.user.id
+        shopName: req.user.shopName,
+        shopDescription: req.user.shopDescription,
+        shopImage: req.user.shopImage,
+        createdAt: req.user.createdAt,
+        updatedAt: req.user.updatedAt
       });
     }
   });

@@ -7,14 +7,22 @@ module.exports = function(sequelize, DataTypes) {
         len: [5] // only allow values with length 5
       }
     },
+    username: {
+      type: DataTypes.STRING
+    },
     category: {
       type: DataTypes.STRING
     },
     description: {
-      type: DataTypes.TEXT
+      type: DataTypes.TEXT,
+      allowNull: false
     },
     price: {
       type: DataTypes.DECIMAL(10, 2),
+      allowNull: false
+    },
+    quantity: {
+      type: DataTypes.INTEGER,
       allowNull: false
     },
     imageURL: {
