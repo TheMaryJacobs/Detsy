@@ -27,7 +27,7 @@ require("./routes/htmlRoutes")(app);
 require("./routes/api-routes.js")(app);
 require("./routes/authentication-routes.js")(app);
 
-var syncOptions = { force: true };
+var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
