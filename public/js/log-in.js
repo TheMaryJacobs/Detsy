@@ -32,10 +32,10 @@ setUpShopBtnEl.addEventListener("click", function() {
 });
 // adds input information into an object that can be added to the database
 
-function success(){
+function success() {
   alert("You are signed in");
 }
 
-function failure(){
+function failure() {
   alert("Error. Email and password did not match.");
 }

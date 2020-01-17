@@ -35,25 +35,25 @@ setUpShopBtnEl.addEventListener("click", function() {
         case "email":
           emailWrong();
           break;
-          default:
-            sucess();
+        default:
+          sucess();
           break;
-        }
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
+      }
+    })
+    .catch(function(error) {
+      console.log(error);
     });
-    
-    function passwordWrong() {
-      alert("There was an issue with your password. Try again, please.");
-    }
-    function usernameWrong() {
-      alert("There was an issue with your username. Try a new one, please.");
-    }
-    function emailWrong() {
-      alert("There was an issue with your email. Try a new one, please.");
-    }
-    function sucess() {
-      alert('Success')
-    }
+});
+
+function passwordWrong() {
+  alert("There was an issue with your password. Try again, please.");
+}
+function usernameWrong() {
+  alert("There was an issue with your username. Try a new one, please.");
+}
+function emailWrong() {
+  alert("There was an issue with your email. Try a new one, please.");
+}
+function sucess() {
+  alert("Success");
+}
