@@ -4,15 +4,11 @@ const cardEls = document.querySelectorAll(".card");
 
 let realData;
 
-axios
-  .get("/api/users/all")
-  .then(function (response) {
-    console.log(response);
-    realData = response.data;
-    realData.reverse();
-    renderCards()
-  })
-
+axios.get("/api/users/all").then(function(response) {
+  realData = response.data;
+  realData.reverse();
+  renderCards();
+});
 
 //function that will render the innerHTMl of the 6 cards on the page
 function renderCards() {
