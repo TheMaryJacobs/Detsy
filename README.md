@@ -10,12 +10,15 @@ This is a marketplace app. Using this app users can create a profile, list items
 
 https://detsy.herokuapp.com/
 
+## Technologies Used
+MySQL, Passport user authentication, Bootstrap CSS
+
 # Images
 
-![home page](https://github.com/TheMaryJacobs/Project2/blob/nav-fix/public/readme%20images/Screen%20Shot%202020-01-09%20at%2010.01.11%20PM.png?raw=true)
-![search page](https://github.com/TheMaryJacobs/Project2/blob/nav-fix/public/readme%20images/Screen%20Shot%202020-01-09%20at%2010.03.15%20PM.png?raw=true)
-![product page](https://github.com/TheMaryJacobs/Project2/blob/nav-fix/public/readme%20images/Screen%20Shot%202020-01-09%20at%2010.03.41%20PM.png?raw=true)
-![sign up page](https://github.com/TheMaryJacobs/Project2/blob/nav-fix/public/readme%20images/Screen%20Shot%202020-01-09%20at%2010.05.06%20PM.png?raw=true)
+![home page](https://github.com/TheMaryJacobs/Detsy/blob/master/public/readme%20images/Screen%20Shot%202020-01-09%20at%2010.01.11%20PM.png?raw=true)
+![search page](https://github.com/TheMaryJacobs/Detsy/blob/master/public/readme%20images/Screen%20Shot%202020-01-09%20at%2010.03.15%20PM.png?raw=true)
+![product page](https://github.com/TheMaryJacobs/Detsy/blob/master/public/readme%20images/Screen%20Shot%202020-01-09%20at%2010.03.33%20PM.png?raw=true)
+![sign up page](https://github.com/TheMaryJacobs/Detsy/blob/master/public/readme%20images/Screen%20Shot%202020-01-09%20at%2010.03.41%20PM.png?raw=true)
 
 # Usage
 
@@ -29,11 +32,8 @@ Mary Jacobs,
 Paul Hendrickson, and
 Samantha Sengsouvanh
 
-Credit to Jake O’Toole for the format of this readme.
-
 # Future Developments
 
-• Have it function.
 • Built in messaging app for security and privacy.
 • General filters to prevent misuse of application.
 • Secure payment platform.
@@ -44,7 +44,7 @@ Credit to Jake O’Toole for the format of this readme.
 
 # Challenges
 
-One of our members, Paul, was out sick for most of the project. Him working remote added several more communication challenges, and his brain working at 50% (his words) didn't help either. Passport was hard to set up, and it was challenging to figure out how to connect the database, back to our front-end at the last minute.
+One of our members, Paul, was out sick for most of the project. Him working remote added several more communication challenges. Passport was very difficult to set up, and it was challenging to figure out how to connect the database, back to our front-end at the last minute.
 
 # Credits
 
